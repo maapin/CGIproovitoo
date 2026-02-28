@@ -4,6 +4,6 @@ public record Table(
     Integer id,
     Integer seats,
     Status status,
-    Tags tags
+    Tags[] tags
 ) {
 }
