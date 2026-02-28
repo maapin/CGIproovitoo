@@ -13,12 +13,15 @@ public class TableCollectionRepository {
     private final List<Table> tables = new ArrayList<>();
 
     public TableCollectionRepository(){
-        tables.add(new Table(1, 4, Status.AVAILABLE, Tags.NEAR_WINDOW));
-        tables.add(new Table(2, 2, Status.AVAILABLE, Tags.QUIET_AREA));
-        tables.add(new Table(3, 6, Status.RESERVED, Tags.CHILD_FRIENDLY));
-        tables.add(new Table(4, 4, Status.AVAILABLE, Tags.OUTDOOR_SEATING));
-        tables.add(new Table(5, 8, Status.RESERVED, Tags.PRIVATE_ROOM));
-        tables.add(new Table(6, 2, Status.RESERVED, Tags.OUTDOOR_SEATING));
+
+        /*
+        tables.add(new Table(1, 4, Status.AVAILABLE, new Tags[]{Tags.NEAR_WINDOW}));
+        tables.add(new Table(2, 2, Status.AVAILABLE, new Tags[]{Tags.QUIET_AREA}));
+        tables.add(new Table(3, 6, Status.RESERVED, new Tags[]{Tags.CHILD_FRIENDLY}));
+        tables.add(new Table(4, 4, Status.AVAILABLE, new Tags[]{Tags.OUTDOOR_SEATING}));
+        tables.add(new Table(5, 8, Status.RESERVED, new Tags[]{Tags.PRIVATE_ROOM}));
+        tables.add(new Table(6, 2, Status.RESERVED, new Tags[]{Tags.OUTDOOR_SEATING}));
+        // */
     }
 
     public List<Table> getAllTables() {
