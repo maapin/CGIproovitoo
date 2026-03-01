@@ -14,7 +14,7 @@ import com.example.proovitoo.repository.TableCollectionRepository;
 public class TableController {
 
     private final TableCollectionRepository tableCollectionRepository;
-    
+
     public TableController(TableCollectionRepository tableCollectionRepository) {
         this.tableCollectionRepository = tableCollectionRepository;
     }
