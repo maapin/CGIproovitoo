@@ -18,21 +18,24 @@ public class TableCollectionRepository {
     private final List<Table> tables = new ArrayList<>();
     private final ObjectMapper objectMapper;
 
+    private void randomizeTableStatuses() {
+        for (int i = 0; i < tables.size(); i++) {
+            int random = (int) (Math.random() * 101);
+            if (random <= 30) {
+                tables.set(i, tables.get(i).setStatus(Status.RESERVED));
+            } else {
+                tables.set(i, tables.get(i).setStatus(Status.AVAILABLE));
+            }
+        }
+    }
+
     public TableCollectionRepository() {
 
         this.objectMapper = new ObjectMapper(new YAMLFactory());
 
         try {
             InputStream yamlInputStream = TypeReference.class.getResourceAsStream("/tables.yaml");
-            Table[] loadedTables = this.objectMapper.readValue(yamlInputStream, Table[].class);
-            for (Table table : loadedTables) {
-                int random = (int) (Math.random() * 101);
-                if (random <= 30) {
-                    tables.add(table.setStatus(Status.RESERVED));
-                } else {
-                    tables.add(table.setStatus(Status.AVAILABLE));
-                }
-            }
+            tables.addAll(java.util.Arrays.asList(this.objectMapper.readValue(yamlInputStream, Table[].class)));
         } catch (Exception e) {
             System.err.println("Error reading tables.yaml: " + e.getMessage());
         }
@@ -40,6 +43,7 @@ public class TableCollectionRepository {
     }
 
     public List<Table> getAllTables() {
+        randomizeTableStatuses();
         return tables;
     }
 
