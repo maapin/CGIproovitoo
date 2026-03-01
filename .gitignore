@@ -31,3 +31,6 @@ build/
 
 ### VS Code ###
 .vscode/
+plaan.ods
+allikad.txt
+.~lock.plaan.ods#
