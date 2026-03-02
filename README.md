@@ -1,6 +1,11 @@
 # CGI suvepraktikale kandideerimise ülesande lahendus
 
-Selline siis sai, rohkem mul kahjuks selle jaoks aega ei olnud :(
+Selline siis sai, rohkem mul kahjuks selle jaoks aega ei olnud :(  
+Kõik broneeringud on alati juhuslikud ja genereeritakse iga päringu korral uuesti.
+Kasutaja tehtud broneeringuid tegelikult ei salvestata.  
+Laudade kirjeldus (kohtade arv, laua "omadused") on tables.yaml failis.  
+Front-end on tehtud cursor ai vibe codingu abiga, mis käsitsi muutmist praktiliselt ei vajanud.
+
 
 ## Käivitamine:  
 `./mvnw spring-boot:run`  
