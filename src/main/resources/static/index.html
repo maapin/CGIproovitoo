@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="et">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Restorani lauabroneering</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="app-header">
+        <h1>Restorani lauabroneering</h1>
+        <p>Vali kuupäev, kellaaeg, seltskonna suurus ja eelistused, et leida parim vaba laud.</p>
+      </header>
+
+      <main class="app-main">
+        <section class="controls">
+          <div class="control-group">
+            <label for="dateInput">Kuupäev</label>
+            <input type="date" id="dateInput" />
+          </div>
+          <div class="control-group">
+            <label for="timeInput">Kellaaeg</label>
+            <input type="time" id="timeInput" />
+          </div>
+          <div class="control-group">
+            <label for="partySizeInput">Seltskonna suurus</label>
+            <input type="number" id="partySizeInput" min="1" max="12" value="2" />
+          </div>
+
+          <fieldset class="control-group control-group--preferences">
+            <legend>Eelistused</legend>
+            <label><input type="checkbox" value="NEAR_WINDOW" class="pref-checkbox" /> Akna lähedal (NEAR_WINDOW)</label>
+            <label><input type="checkbox" value="NEAR_DOOR" class="pref-checkbox" /> Ukse lähedal (NEAR_DOOR)</label>
+            <label><input type="checkbox" value="QUIET_AREA" class="pref-checkbox" /> Vaikne tsoon (QUIET_AREA)</label>
+            <label><input type="checkbox" value="CHILD_FRIENDLY" class="pref-checkbox" /> Lastega sobiv (CHILD_FRIENDLY)</label>
+            <label><input type="checkbox" value="OUTDOOR_SEATING" class="pref-checkbox" /> Õueterrass (OUTDOOR_SEATING)</label>
+            <label><input type="checkbox" value="PRIVATE_ROOM" class="pref-checkbox" /> Privaatruum (PRIVATE_ROOM)</label>
+          </fieldset>
+
+          <button id="findTableBtn" class="primary-btn">Leia parim laud</button>
+        </section>
+
+        <section class="layout-and-info">
+          <section class="table-layout">
+            <h2>Lauaplaan</h2>
+            <div id="tableGrid" class="table-grid" aria-label="Lauaplaan 3 x 4"></div>
+            <div class="legend">
+              <span class="legend-item">
+                <span class="legend-swatch legend-swatch--free"></span> Vaba laud
+              </span>
+              <span class="legend-item">
+                <span class="legend-swatch legend-swatch--occupied"></span> Hõivatud laud
+              </span>
+              <span class="legend-item">
+                <span class="legend-swatch legend-swatch--recommended"></span> Soovitatud laud
+              </span>
+            </div>
+          </section>
+
+          <section class="details">
+            <h2>Valitud laud</h2>
+            <div id="selectionInfo" class="selection-info">
+              <p>Pole veel valitud. Kliki laual või kasuta nuppu &ldquo;Leia parim laud&rdquo;.</p>
+            </div>
+            <button id="bookTableBtn" class="secondary-btn" disabled>Broneeri laud</button>
+            <div id="statusMessage" class="status-message" role="status" aria-live="polite"></div>
+          </section>
+        </section>
+      </main>
+
+      <footer class="app-footer">
+        <small>&copy; <span id="yearSpan"></span> Demo-restoran – ainult front-end näidis</small>
+      </footer>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
+
