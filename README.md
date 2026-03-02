@@ -1,6 +1,6 @@
 # CGI suvepraktikale kandideerimise ülesande lahendus
 
-Selline siis sai, rohkem mul kahjuk selle jaoks aega ei olnud :(
+Selline siis sai, rohkem mul kahjuks selle jaoks aega ei olnud :(
 
 ## Käivitamine:  
 `./mvnw spring-boot:run`  
