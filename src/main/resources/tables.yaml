@@ -1,0 +1,47 @@
+- id: 1
+  seats: 2
+  tags: 
+  - OUTDOOR_SEATING
+- id: 2
+  seats: 4
+  tags: 
+  - NEAR_WINDOW
+  - CHILD_FRIENDLY
+- id: 3
+  seats: 0 
+- id: 4
+  seats: 2
+  tags: 
+  - OUTDOOR_SEATING
+- id: 5
+  seats: 4
+  tags: 
+  - NEAR_WINDOW
+  - CHILD_FRIENDLY
+- id: 6
+  seats: 8
+  tags: 
+  - CHILD_FRIENDLY
+- id: 7
+  seats: 6
+  tags: 
+  - OUTDOOR_SEATING
+- id: 8
+  seats: 4
+  tags: 
+  - NEAR_DOOR
+- id: 9
+  seats: 8
+- id: 10
+  seats: 8
+  tags: 
+  - PRIVATE_ROOM
+  - QUIET_AREA
+- id: 11
+  seats: 2
+  tags: 
+  - QUIET_AREA
+- id: 12
+  seats: 2
+  tags: 
+  - QUIET_AREA
